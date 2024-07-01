@@ -1,12 +1,13 @@
 import City from './City.js';
+import styles from './CityList.module.css';
 
-function CityList( { cities } ) {
+function CityList( { cities, onClick } ) {
 
   let cityList = cities.map(city => {
-    return <City key={city.name} name={city.name} />
+    return <City key={city.name} city={city} onClick={onClick} />
   })
   return(
-    <div>
+    <div className={styles.container}>
       <ul>
         {cityList}
       </ul>

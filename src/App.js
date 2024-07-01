@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="container">
       <CityList cities={cities} />
-      <ActiveCity />
+      <ActiveCity selectedCity={cities[0]}/>
     </div>
   );
 }

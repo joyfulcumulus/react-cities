@@ -1,12 +1,14 @@
 import City from './City.js';
 
-function CityList() {
+function CityList( { cities } ) {
+
+  let cityList = cities.map(city => {
+    return <City key={city.name} name={city.name} />
+  })
   return(
     <div>
       <ul>
-        <City />
-        <City />
-        <City />
+        {cityList}
       </ul>
     </div>
   )

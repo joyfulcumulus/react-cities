@@ -1,6 +1,6 @@
-function City() {
+function City({ name='city name' }) {
   return(
-    <li>City list item</li>
+    <li>{name}</li>
   )
 }
 

@@ -5,12 +5,12 @@ import ActiveCity from './components/ActiveCity.js';
 import './App.css';
 
 function App() {
-  const [ selectedSlug, setSelectedSlug ] = useState(cities[0].slug);
+  const [ selectedCity, setSelectedCity ] = useState(cities[0]);
 
   return (
     <div className="container">
-      <CityList cities={cities} onClick={setSelectedSlug} />
-      <ActiveCity selectedCity={selectedSlug} />
+      <CityList cities={cities} onClick={setSelectedCity} />
+      <ActiveCity selectedCity={selectedCity} />
     </div>
   );
 }

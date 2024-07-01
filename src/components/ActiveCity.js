@@ -1,11 +1,15 @@
+import styles from './ActiveCity.module.css';
+
 function ActiveCity( { selectedCity }) {
-  const url = `https://kitt.lewagon.com/placeholder/cities/${selectedCity}`
+  const url = `https://kitt.lewagon.com/placeholder/cities/${selectedCity.slug}`
 
   return(
-    <div>
+    <div className={styles.layout}>
       <h1>{selectedCity.name}</h1>
       <p>{selectedCity.address}</p>
-      <img alt="Representation of the city" src={url} />
+      <div className={styles.imgContainer}>
+        <img alt="Representation of the city" src={url} />
+      </div>
     </div>
   )
 }
